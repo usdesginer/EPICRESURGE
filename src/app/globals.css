@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand Specification: Direction B - Clean Corporate Professionalism */
+    --background: 0 0% 100%;          /* Pure White #FFFFFF */
+    --foreground: 222 47% 11%;         /* Deep Corporate Navy #0F172A */
+    --card: 0 0% 100%;                 /* Clean White #FFFFFF */
+    --card-foreground: 222 47% 11%;    /* Deep Corporate Navy #0F172A */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 221 83% 53%;            /* Trust Blue #2563EB for main actions */
+    --primary-foreground: 0 0% 100%;   /* Crisp White */
+    --secondary: 210 40% 96.1%;        /* Subtle Slate #F1F5F9 */
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96.1%;            /* Subtle Slate surface */
+    --muted-foreground: 215 16% 47%;   /* Muted Slate #64748B for supporting text */
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;             /* Crisp Light Border #E2E8F0 */
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
+    --radius: 1rem;                    /* Refined rounded panels */
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-white text-[#0F172A] font-body antialiased selection:bg-[#2563EB]/15 selection:text-[#0F172A];
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline text-[#0F172A] tracking-tight;
+  }
+}
+
+/* Typography Hierarchy Standards:
+   - Main headline: 56–68px (text-5xl to text-6xl/text-7xl)
+   - Section heading: 36–44px (text-3xl to text-4xl)
+   - Subheading: 22–26px (text-xl to text-2xl)
+   - Card heading: 19–22px (text-lg to text-xl)
+   - Body text: 16–18px (text-base to text-lg)
+   - Supporting text: 14–15px (text-sm)
+*/
+.text-main-headline {
+  @apply text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-bold leading-[1.12] text-[#0F172A] tracking-tight;
+}
+
+.text-section-heading {
+  @apply text-3xl md:text-4xl lg:text-[40px] font-bold leading-[1.2] text-[#0F172A] tracking-tight;
+}
+
+.text-subheading {
+  @apply text-xl md:text-2xl font-medium leading-relaxed text-[#475569];
+}
+
+.text-card-heading {
+  @apply text-lg md:text-[21px] font-bold text-[#0F172A] leading-snug;
+}
+
+.text-body-standard {
+  @apply text-base md:text-[17px] text-[#334155] leading-relaxed font-normal;
+}
+
+.text-supporting {
+  @apply text-sm md:text-[15px] text-[#64748B] leading-relaxed;
+}
+
+/* Restrained content panels: clean white, subtle borders, soft shadows */
+.content-panel {
+  @apply bg-white border border-[#E2E8F0] rounded-2xl shadow-sm hover:shadow-md transition-shadow;
+}
+
+.content-panel-subtle {
+  @apply bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl;
+}
+
+.glass-card {
+  @apply bg-white/95 border border-[#E2E8F0] shadow-sm rounded-2xl;
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.08), transparent 60%);
+}
+
+.mouse-spotlight {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(37, 99, 235, 0.04),
+    transparent 80%
+  );
+}
+
+.font-headline {
+  font-feature-settings: "ss01", "ss02", "cv01", "tnum";
+}
+
+.font-numeric {
+  font-family: 'Manrope', sans-serif;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+
+/* Subtle, elegant flow animation for transaction visualization */
+@keyframes flowDash {
+  from {
+    stroke-dashoffset: 24;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-flow-dash {
+  animation: flowDash 1.4s linear infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.15);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* ========================================================================= */
+/* MOTION IDENTITY: INTELLIGENCE IN MOTION (Precision. Momentum. Resurgence) */
+/* ========================================================================= */
+
+/* 1. Smooth Upward Text Mask Reveal */
+@keyframes textMaskUp {
+  0% {
+    transform: translateY(115%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.animate-text-mask-up {
+  animation: textMaskUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 2. Checkmark Stroke Drawing Animation */
+@keyframes drawCheck {
+  0% {
+    stroke-dashoffset: 60;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw-check {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  animation: drawCheck 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 3. Ambient Drift Light */
+@keyframes ambientDrift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.035;
+  }
+  50% {
+    transform: translate(35px, -25px) scale(1.08);
+    opacity: 0.075;
+  }
+}
+
+.animate-ambient-drift {
+  animation: ambientDrift 14s ease-in-out infinite;
+}
+
+/* 4. Luxury Card Hover Border Illumination */
+.card-border-glow {
+  position: relative;
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-border-glow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -8px rgba(37, 99, 235, 0.12), 0 0 0 1px rgba(37, 99, 235, 0.28);
+}
+
+/* 5. Traveling Line Glow across Steps & Footers */
+@keyframes pulseLine {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse-line {
+  animation: pulseLine 3s ease-in-out infinite;
+}
+
+/* 6. Respect Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
