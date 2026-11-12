@@ -62,11 +62,18 @@ export function Footer() {
               EpicResurge is a Delaware-registered digital asset forensic and financial fraud investigation firm. We trace stolen crypto and wire funds to help victims pursue structured asset recovery.
             </p>
 
-            <div className="pt-2 flex items-center gap-3">
-              <span className="inline-flex items-center gap-1.5 text-xs text-[#CBD5E1] bg-[#1C2836] px-3 py-1.5 rounded-lg border border-[#2A3A4E]">
+            <div className="pt-2 flex flex-col gap-2.5">
+              <span className="inline-flex items-center gap-1.5 text-xs text-[#CBD5E1] bg-[#1C2836] px-3 py-1.5 rounded-lg border border-[#2A3A4E] w-fit">
                 <MapPin className="w-3.5 h-3.5 text-[#C5A059]" />
                 Delaware Division of Corporations Registered
               </span>
+              <div className="text-xs text-[#CBD5E1] flex items-start gap-2 pt-0.5">
+                <MapPin className="w-3.5 h-3.5 text-[#C5A059] shrink-0 mt-0.5" />
+                <address className="not-italic leading-relaxed">
+                  <span className="text-[#94A3B8] block text-[11px] uppercase tracking-wider font-semibold">Operations Office</span>
+                  Landstrasse 73, 8718 Schänis, Switzerland
+                </address>
+              </div>
             </div>
           </div>
           
@@ -104,6 +111,14 @@ export function Footer() {
                   <Mail className="w-4 h-4 text-[#1D4ED8]" />
                   <span>investigator@epicresurge.com</span>
                 </a>
+              </li>
+              <li className="flex items-start gap-2 pt-1 text-xs text-[#CBD5E1]">
+                <MapPin className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
+                <address className="not-italic leading-relaxed">
+                  Landstrasse 73<br />
+                  8718 Schänis<br />
+                  Switzerland
+                </address>
               </li>
               <li><Link href="/contact" className="hover:text-[#DFBA73] transition-colors">Contact Our Office</Link></li>
               <li><Link href="/#forensic-intake" className="text-[#DFBA73] hover:underline font-semibold">Start Free Case Review →</Link></li>

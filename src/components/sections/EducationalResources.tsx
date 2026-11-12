@@ -78,11 +78,11 @@ export function EducationalResources() {
               <span>Knowledge Centre · Learn & Stay Protected</span>
             </div>
             
-            <h2 className="text-3xl md:text-4xl lg:text-[40px] font-headline font-bold mb-3 md:mb-4 text-[#0B1528] tracking-tight">
+            <h2 className="text-[28px] md:text-[34px] font-headline font-[750] leading-[1.18] tracking-[-0.03em] mb-3 md:mb-4 text-[#0B1528]">
               Educational Resources & Fraud Prevention
             </h2>
             
-            <p className="text-base md:text-[17px] text-[#475569] leading-relaxed max-w-2xl mx-auto font-normal">
+            <p className="text-base text-[#475569] leading-[1.65] max-w-2xl mx-auto font-normal">
               Practical guides written by our investigators to help you recognize warning signs, understand deceptive tactics, and protect your digital assets.
             </p>
           </SectionReveal>
@@ -137,11 +137,11 @@ export function EducationalResources() {
                           {article.tag}
                         </span>
 
-                        <h3 className="text-xl font-headline font-bold text-[#0B1528] mb-2 leading-snug group-hover:text-[#1D4ED8] transition-colors relative inline-block after:content-[''] after:absolute after:-bottom-0.5 after:left-0 after:w-0 after:h-[2px] after:bg-[#1D4ED8] group-hover:after:w-full after:transition-all after:duration-300">
+                        <h3 className="text-[19px] font-headline font-bold text-[#0B1528] mb-2 leading-[1.25] tracking-[-0.02em] group-hover:text-[#1D4ED8] transition-colors relative inline-block after:content-[''] after:absolute after:-bottom-0.5 after:left-0 after:w-0 after:h-[2px] after:bg-[#1D4ED8] group-hover:after:w-full after:transition-all after:duration-300">
                           {article.title}
                         </h3>
 
-                        <p className="text-sm text-[#475569] leading-relaxed font-normal">
+                        <p className="text-[15px] text-[#475569] leading-[1.65] font-normal">
                           {article.subtitle}
                         </p>
                       </div>

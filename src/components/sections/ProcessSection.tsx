@@ -126,11 +126,11 @@ export function ProcessSection() {
               <span>How It Works · Investigative Process</span>
             </div>
             
-            <h2 className="text-3xl md:text-4xl lg:text-[42px] font-headline font-bold mb-4 text-[#0B1528] tracking-tight">
+            <h2 className="text-[28px] md:text-[34px] font-headline font-[750] leading-[1.18] tracking-[-0.03em] mb-4 text-[#0B1528]">
               Our Investigation & Recovery Process
             </h2>
             
-            <p className="text-base md:text-[18px] text-[#475569] leading-relaxed max-w-2xl mx-auto font-normal">
+            <p className="text-base text-[#475569] leading-[1.65] max-w-2xl mx-auto font-normal">
               You should never have to guess what happens next. Here is how we evaluate your case and what an actual transaction investigation looks like in practice.
             </p>
           </SectionReveal>

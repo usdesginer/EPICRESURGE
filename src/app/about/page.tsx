@@ -115,9 +115,9 @@ export default function AboutPage() {
 
               <div className="p-6 rounded-2xl bg-[#111D31] border border-[#1E2E48] space-y-2">
                 <MapPin className="w-6 h-6 text-[#38BDF8]" />
-                <h4 className="text-base font-bold text-[#F8FAFC]">International Hubs</h4>
+                <h4 className="text-base font-bold text-[#F8FAFC]">Global Operations</h4>
                 <p className="text-xs text-[#94A3B8] leading-relaxed">
-                  Corporate office in Delaware with operational consultation liaison desks in NY and London.
+                  Delaware registered entity with European operations office at Landstrasse 73, 8718 Schänis, Switzerland.
                 </p>
               </div>
 

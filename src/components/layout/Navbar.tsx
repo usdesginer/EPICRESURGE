@@ -100,7 +100,7 @@ export function Navbar() {
           </div>
           <div className="flex flex-col">
             <span className="text-xl md:text-2xl font-headline font-bold tracking-tight text-white flex items-center">
-              EpicResurge<span className="text-[#C5A059] font-extrabold">.</span>
+              EpicResurge
             </span>
             <span className="text-[11px] uppercase tracking-wider text-[#94A3B8] font-medium hidden sm:block">
               Financial Fraud Investigation & Consulting
@@ -111,15 +111,15 @@ export function Navbar() {
         <div className="hidden lg:flex items-center gap-7 ml-auto mr-8">
           {mounted && (
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1.5 text-[15px] font-medium text-[#CBD5E1] hover:text-[#C5A059] transition-colors outline-none cursor-pointer py-2">
-                Services <ChevronDown className="w-4 h-4 opacity-70" />
+              <DropdownMenuTrigger className="flex items-center gap-1.5 text-[13.5px] font-medium text-[#CBD5E1] hover:text-[#C5A059] transition-colors outline-none cursor-pointer py-2">
+                Services <ChevronDown className="w-3.5 h-3.5 opacity-70" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-72 bg-[#0B1528] border-[#1C2C48] shadow-2xl rounded-xl p-2 text-[#E2E8F0]">
                 {servicesList.map((service) => (
                   <DropdownMenuItem key={service.name} asChild>
                     <Link 
                       href={service.href} 
-                      className="w-full cursor-pointer py-2.5 px-3 text-[14px] text-[#CBD5E1] hover:text-white hover:bg-[#13223D] rounded-lg transition-colors font-medium flex items-center justify-between group/item"
+                      className="w-full cursor-pointer py-2.5 px-3 text-[13.5px] text-[#CBD5E1] hover:text-white hover:bg-[#13223D] rounded-lg transition-colors font-medium flex items-center justify-between group/item"
                     >
                       <span>{service.name}</span>
                       <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059] opacity-0 group-hover/item:opacity-100 transition-opacity" />
@@ -134,7 +134,7 @@ export function Navbar() {
             <Link 
               key={link.href} 
               href={link.href} 
-              className="text-[15px] font-medium text-[#CBD5E1] hover:text-[#C5A059] transition-colors py-2"
+              className="text-[13.5px] font-medium text-[#CBD5E1] hover:text-[#C5A059] transition-colors py-2"
             >
               {link.label}
             </Link>

@@ -132,12 +132,12 @@ export function ServicesSection() {
               <span>Who We Help & Our Services</span>
             </div>
             
-            <h2 className="text-3xl md:text-4xl lg:text-[44px] font-headline font-bold mb-4 text-[#0B1528] tracking-tight">
+            <h2 className="text-[28px] md:text-[34px] font-headline font-[750] leading-[1.18] tracking-[-0.03em] mb-4 text-[#0B1528]">
               Online Scams Come in Different Forms. <br className="hidden sm:inline" />
               <span className="text-[#1D4ED8]">We&apos;re Here to Help.</span>
             </h2>
             
-            <p className="text-base md:text-[18px] text-[#475569] leading-relaxed max-w-2xl mx-auto font-normal">
+            <p className="text-base text-[#475569] leading-[1.65] max-w-2xl mx-auto font-normal">
               Whether you experienced an uncooperative broker, fake cryptocurrency exchange, or fraudulent transfer, we examine available records and explain your recovery options.
             </p>
           </SectionReveal>
@@ -264,7 +264,7 @@ export function ServicesSection() {
                       <span className="text-xs font-semibold text-[#1D4ED8] uppercase tracking-wider block mb-1">
                         {pillar.tagline}
                       </span>
-                      <h4 className="text-2xl md:text-[26px] font-headline font-extrabold text-[#0B1528] mb-3 leading-snug group-hover:text-[#1D4ED8] transition-colors">
+                      <h4 className="text-[20px] font-headline font-bold text-[#0B1528] mb-2 leading-[1.25] tracking-[-0.02em] group-hover:text-[#1D4ED8] transition-colors">
                         {pillar.title}
                       </h4>
 

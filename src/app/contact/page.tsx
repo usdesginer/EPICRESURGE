@@ -175,9 +175,9 @@ export function ContactPage() {
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-[#94A3B8] px-1">Global Regional Desks</h3>
                   <div className="grid gap-3">
                     {[
-                      { city: "New York Hub", region: "North America Operations", time: "Mon–Fri: 9am - 8pm EST" },
-                      { city: "London Hub", region: "UK & European Desks", time: "Mon–Fri: 8am - 7pm GMT" },
-                      { city: "Zurich Hub", region: "Swiss Forensic Laboratory", time: "Air-Gapped Hardware Audits" },
+                      { city: "Switzerland Operations Office", region: "Landstrasse 73, 8718 Schänis, Switzerland", time: "Central European Operations & Forensic Desk" },
+                      { city: "New York Hub", region: "North America Operations Desk", time: "Mon–Fri: 9am - 8pm EST" },
+                      { city: "London Hub", region: "UK & Commonwealth Liaison", time: "Mon–Fri: 8am - 7pm GMT" },
                       { city: "Singapore Hub", region: "Asia-Pacific Regional Office", time: "Mon–Sat: 9am - 9pm SGT" }
                     ].map((hub, idx) => (
                       <div key={idx} className="p-4 rounded-xl bg-[#111D31] border border-[#1E2E48] hover:border-slate-700 transition-all flex items-start gap-3.5">

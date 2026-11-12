@@ -104,7 +104,7 @@ export function Hero() {
               </div>
               
               {/* Main Headline: Line-by-Line Upward Mask Animation */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] xl:text-[58px] font-headline font-extrabold leading-[1.14] sm:leading-[1.1] tracking-tight text-[#0B1528]">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-headline font-[800] leading-[1.12] tracking-[-0.035em] text-[#0B1528]">
                 <span className="block overflow-hidden py-0.5">
                   <span className="block animate-text-mask-up" style={{ animationDelay: '60ms' }}>
                     Lost Money to an Online Scam?
@@ -123,7 +123,7 @@ export function Hero() {
               </h1>
               
               {/* Clear, Everyday English Description */}
-              <p className="text-base sm:text-lg text-[#475569] leading-relaxed font-normal max-w-2xl pt-2">
+              <p className="text-base text-[#475569] leading-[1.65] font-normal max-w-2xl pt-2">
                 We help individuals and businesses investigate online scams, trace digital asset transactions, and understand the possible next steps towards recovering lost funds.
               </p>
 
@@ -132,7 +132,7 @@ export function Hero() {
                 <Link href="#forensic-intake" className="w-full sm:w-auto">
                   <Button 
                     size="lg" 
-                    className="w-full sm:w-auto h-13 px-8 text-base bg-[#1D4ED8] hover:bg-[#1E40AF] text-white font-semibold rounded-xl shadow-md shadow-blue-900/20 hover:shadow-lg hover:shadow-blue-900/30 transition-all duration-300 hover:scale-[1.015] active:scale-[0.985] flex items-center justify-center gap-2.5 group"
+                    className="w-full sm:w-auto h-12 px-7 text-sm bg-[#1D4ED8] hover:bg-[#1E40AF] text-white font-semibold rounded-xl shadow-md shadow-blue-900/20 hover:shadow-lg hover:shadow-blue-900/30 transition-all duration-300 hover:scale-[1.015] active:scale-[0.985] flex items-center justify-center gap-2.5 group"
                   >
                     <span>Request a Free Case Assessment</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -142,7 +142,7 @@ export function Hero() {
                   <Button 
                     size="lg" 
                     variant="outline" 
-                    className="w-full sm:w-auto h-13 px-7 text-base border-[#DCD7CE] bg-[#FAF8F3] hover:bg-[#F3EFE6] text-[#0B1528] font-medium rounded-xl transition-all duration-300 hover:border-[#C5A059]/60 flex items-center justify-center gap-2 shadow-xs"
+                    className="w-full sm:w-auto h-12 px-6 text-sm border-[#DCD7CE] bg-[#FAF8F3] hover:bg-[#F3EFE6] text-[#0B1528] font-semibold rounded-xl transition-all duration-300 hover:border-[#C5A059]/60 flex items-center justify-center gap-2 shadow-xs"
                   >
                     <span>Explore Our Services</span>
                   </Button>

@@ -138,12 +138,12 @@ NARRATIVE: ${description}
               <div className="lg:col-span-5 space-y-6">
                 <SectionReveal>
                   <div className="space-y-4">
-                    <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-headline font-extrabold text-white tracking-tight leading-[1.15]">
+                    <h2 className="text-[28px] sm:text-[32px] lg:text-[34px] font-headline font-[750] text-white tracking-[-0.03em] leading-[1.18]">
                       Every Situation Has a Story. <br />
                       <span className="text-[#60A5FA]">Let&apos;s Understand Yours.</span>
                     </h2>
                     
-                    <p className="text-base sm:text-[17px] text-[#CBD5E1] leading-relaxed font-normal">
+                    <p className="text-base text-[#CBD5E1] leading-[1.65] font-normal">
                       Tell us what happened, and our team will review your enquiry to determine whether we may be able to help.
                     </p>
                   </div>
@@ -161,9 +161,9 @@ NARRATIVE: ${description}
 
                   {/* What Happens Next: 3 Simple Steps */}
                   <div className="pt-4 space-y-3.5">
-                    <h3 className="text-xs font-bold uppercase tracking-wider text-[#94A3B8]">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-[#94A3B8]">
                       What happens after you submit:
-                    </h3>
+                    </p>
 
                     <div className="space-y-3">
                       {/* Step 1 */}

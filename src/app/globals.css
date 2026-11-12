@@ -1,33 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    /* Brand Specification: Direction B - Clean Corporate Professionalism */
-    --background: 0 0% 100%;          /* Pure White #FFFFFF */
-    --foreground: 222 47% 11%;         /* Deep Corporate Navy #0F172A */
-    --card: 0 0% 100%;                 /* Clean White #FFFFFF */
-    --card-foreground: 222 47% 11%;    /* Deep Corporate Navy #0F172A */
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --primary: 221 83% 53%;            /* Trust Blue #2563EB for main actions */
-    --primary-foreground: 0 0% 100%;   /* Crisp White */
-    --secondary: 210 40% 96.1%;        /* Subtle Slate #F1F5F9 */
-    --secondary-foreground: 222 47% 11%;
-    --muted: 210 40% 96.1%;            /* Subtle Slate surface */
-    --muted-foreground: 215 16% 47%;   /* Muted Slate #64748B for supporting text */
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222 47% 11%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 214 32% 91%;             /* Crisp Light Border #E2E8F0 */
-    --input: 214 32% 91%;
-    --ring: 221 83% 53%;
-    --radius: 1rem;                    /* Refined rounded panels */
-    --mouse-x: 50%;
-    --mouse-y: 50%;
-  }
+:root {
+  --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* Brand Specification: Institutional Financial Intelligence */
+  --background: 0 0% 100%;          /* Pure White #FFFFFF */
+  --foreground: 222 47% 11%;         /* Deep Corporate Navy #0F172A */
+  --card: 0 0% 100%;                 /* Clean White #FFFFFF */
+  --card-foreground: 222 47% 11%;    /* Deep Corporate Navy #0F172A */
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 221 83% 53%;            /* Trust Blue #2563EB for main actions */
+  --primary-foreground: 0 0% 100%;   /* Crisp White */
+  --secondary: 210 40% 96.1%;        /* Subtle Slate #F1F5F9 */
+  --secondary-foreground: 222 47% 11%;
+  --muted: 210 40% 96.1%;            /* Subtle Slate surface */
+  --muted-foreground: 215 16% 47%;   /* Muted Slate #64748B for supporting text */
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222 47% 11%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 214 32% 91%;             /* Crisp Light Border #E2E8F0 */
+  --input: 214 32% 91%;
+  --ring: 221 83% 53%;
+  --radius: 1rem;                    /* Refined rounded panels */
+  --mouse-x: 50%;
+  --mouse-y: 50%;
 }
 
 @layer base {
@@ -35,43 +39,106 @@
     @apply border-border;
   }
   body {
-    @apply bg-[#F8F7F4] text-[#0B1528] font-body antialiased selection:bg-[#C5A059]/20 selection:text-[#0B1528];
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    @apply bg-[#F8F7F4] text-[#0B1528] antialiased selection:bg-[#C5A059]/20 selection:text-[#0B1528];
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-headline text-[#0B1528] tracking-tight;
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.035em;
+    line-height: 1.15;
+    color: #101D30;
   }
+  h1 {
+    font-size: clamp(40px, 4.2vw, 54px);
+    font-weight: 800;
+  }
+  h2 {
+    font-size: clamp(28px, 3vw, 34px);
+    font-weight: 750;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  h4 {
+    font-size: 19px;
+    font-weight: 700;
+  }
+  button, nav {
+    font-family: var(--font-body);
+    font-weight: 600;
+  }
+}
+
+.technical-data {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
 /* Typography Hierarchy Standards:
-   - Main headline: 56–68px (text-5xl to text-6xl/text-7xl)
-   - Section heading: 36–44px (text-3xl to text-4xl)
-   - Subheading: 22–26px (text-xl to text-2xl)
-   - Card heading: 19–22px (text-lg to text-xl)
-   - Body text: 16–18px (text-base to text-lg)
-   - Supporting text: 14–15px (text-sm)
+   - Hero heading: Manrope 800 (54px)
+   - Section headings: Manrope 750 (34px)
+   - Card headings: Manrope 700 (19px)
+   - Body text: Inter 400 (16px)
+   - Navigation: Inter 550 (13px)
+   - Buttons: Inter 600 (14px)
+   - Technical data: IBM Plex Mono 500 (12px)
 */
 .text-main-headline {
-  @apply text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-bold leading-[1.12] text-[#0F172A] tracking-tight;
+  font-family: var(--font-heading);
+  font-size: clamp(40px, 4.2vw, 54px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  color: #0B1528;
 }
 
 .text-section-heading {
-  @apply text-3xl md:text-4xl lg:text-[40px] font-bold leading-[1.2] text-[#0F172A] tracking-tight;
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 3vw, 34px);
+  font-weight: 750;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  color: #0B1528;
 }
 
 .text-subheading {
-  @apply text-xl md:text-2xl font-medium leading-relaxed text-[#475569];
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #475569;
 }
 
 .text-card-heading {
-  @apply text-lg md:text-[21px] font-bold text-[#0F172A] leading-snug;
+  font-family: var(--font-heading);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #0B1528;
 }
 
 .text-body-standard {
-  @apply text-base md:text-[17px] text-[#334155] leading-relaxed font-normal;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #334155;
 }
 
 .text-supporting {
-  @apply text-sm md:text-[15px] text-[#64748B] leading-relaxed;
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748B;
 }
 
 /* Restrained content panels: clean white, subtle borders, soft shadows */

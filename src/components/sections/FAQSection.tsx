@@ -53,10 +53,10 @@ export function FAQSection() {
             <HelpCircle className="w-4 h-4 text-[#C5A059]" />
             <span>Frequently Asked Questions</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-[40px] font-headline font-bold mb-4 text-[#0B1528] tracking-tight">
+          <h2 className="text-[28px] md:text-[34px] font-headline font-[750] leading-[1.18] tracking-[-0.03em] mb-4 text-[#0B1528]">
             Answers to Common Questions
           </h2>
-          <p className="text-base md:text-[17px] text-[#4A5568] max-w-2xl mx-auto leading-relaxed font-normal">
+          <p className="text-base text-[#475569] max-w-2xl mx-auto leading-[1.65] font-normal">
             Clear, transparent answers to help you understand how asset tracing and fraud recovery works.
           </p>
         </SectionReveal>
@@ -68,10 +68,10 @@ export function FAQSection() {
               value={`item-${idx}`} 
               className="border border-[#E8E5DF] bg-[#FAF8F3] rounded-2xl px-6 shadow-xs transition-all duration-300 hover:border-[#C5A059]/60 hover:shadow-sm data-[state=open]:border-[#1D4ED8] data-[state=open]:ring-2 data-[state=open]:ring-blue-200/50 data-[state=open]:bg-white"
             >
-              <AccordionTrigger className="text-left text-base md:text-[17px] font-bold text-[#0B1528] py-5 hover:no-underline hover:text-[#1D4ED8] data-[state=open]:text-[#1D4ED8] transition-colors">
+              <AccordionTrigger className="text-left text-[17px] md:text-[18px] font-bold text-[#0B1528] py-5 hover:no-underline hover:text-[#1D4ED8] data-[state=open]:text-[#1D4ED8] transition-colors leading-[1.3]">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-[#4A5568] text-sm md:text-[15px] leading-relaxed pb-6 font-normal">
+              <AccordionContent className="text-[#475569] text-base leading-[1.65] pb-6 font-normal">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

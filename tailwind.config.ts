@@ -12,9 +12,10 @@ export default {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
         sans: ['Inter', 'sans-serif'],
-        headline: ['Manrope', 'Plus Jakarta Sans', 'sans-serif'],
+        headline: ['Manrope', 'sans-serif'],
         numeric: ['Manrope', 'sans-serif'],
-        code: ['monospace'],
+        mono: ['"IBM Plex Mono"', 'monospace'],
+        code: ['"IBM Plex Mono"', 'monospace'],
       },
       colors: {
         brand: {

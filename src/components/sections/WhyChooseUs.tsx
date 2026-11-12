@@ -101,11 +101,11 @@ export function WhyChooseUs() {
               <span>Trust, Credibility & Authentic Accountability</span>
             </div>
             
-            <h2 className="text-3xl md:text-4xl lg:text-[42px] font-headline font-bold mb-4 text-[#0B1528] tracking-tight">
+            <h2 className="text-[28px] md:text-[34px] font-headline font-[750] leading-[1.18] tracking-[-0.03em] mb-4 text-[#0B1528]">
               Why People Choose EpicResurge
             </h2>
             
-            <p className="text-base md:text-[18px] text-[#475569] leading-relaxed max-w-2xl mx-auto font-normal">
+            <p className="text-base text-[#475569] leading-[1.65] max-w-2xl mx-auto font-normal">
               When dealing with financial fraud, caution is essential. We operate with complete transparency, verified qualifications, and documented operating principles.
             </p>
           </SectionReveal>
@@ -403,11 +403,11 @@ export function WhyChooseUs() {
                 <div className="w-9 h-9 rounded-lg bg-blue-50/80 border border-blue-200 flex items-center justify-center text-[#1D4ED8] mb-3">
                   <MapPin className="w-4 h-4" />
                 </div>
-                <h4 className="text-sm font-bold text-[#0B1528] uppercase tracking-wide">
-                  Global Office Liaison
+                <h4 className="text-sm font-bold text-[#0B1528]">
+                  Global Operations
                 </h4>
                 <p className="text-xs text-[#475569] leading-relaxed font-normal">
-                  Delaware registered agent with consultation liaison hubs in New York and London serving international clients.
+                  Delaware registered entity with European operations office at Landstrasse 73, 8718 Schänis, Switzerland.
                 </p>
               </div>
 
