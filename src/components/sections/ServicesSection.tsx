@@ -121,23 +121,23 @@ export function ServicesSection() {
   };
 
   return (
-    <section id="services" className="py-24 bg-slate-50 relative border-b border-slate-200">
+    <section id="services" className="py-24 bg-[#F4F0E8] relative border-b border-[#E5DFD3]">
       <div className="container mx-auto px-4 sm:px-6 relative z-10 w-full max-w-7xl">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
           <SectionReveal>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[#2563EB] text-xs font-semibold mb-4 shadow-xs">
-              <ShieldAlert className="w-4 h-4 text-[#2563EB]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF8F3] border border-[#E2D1A8] text-[#9E7D3B] text-xs font-semibold mb-4 shadow-xs">
+              <ShieldAlert className="w-4 h-4 text-[#C5A059]" />
               <span>Who We Help & Our Services</span>
             </div>
             
-            <h2 className="text-3xl md:text-4xl lg:text-[44px] font-headline font-bold mb-4 text-[#0F172A] tracking-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-[44px] font-headline font-bold mb-4 text-[#0B1528] tracking-tight">
               Online Scams Come in Different Forms. <br className="hidden sm:inline" />
-              <span className="text-[#2563EB]">We&apos;re Here to Help.</span>
+              <span className="text-[#1D4ED8]">We&apos;re Here to Help.</span>
             </h2>
             
-            <p className="text-base md:text-[18px] text-slate-600 leading-relaxed max-w-2xl mx-auto font-normal">
+            <p className="text-base md:text-[18px] text-[#475569] leading-relaxed max-w-2xl mx-auto font-normal">
               Whether you experienced an uncooperative broker, fake cryptocurrency exchange, or fraudulent transfer, we examine available records and explain your recovery options.
             </p>
           </SectionReveal>
@@ -146,11 +146,11 @@ export function ServicesSection() {
         {/* 1. Four Small Situation Cards */}
         <div className="mb-20">
           <SectionReveal>
-            <div className="flex items-center justify-between mb-6 pb-2 border-b border-slate-200">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-600">
+            <div className="flex items-center justify-between mb-6 pb-2 border-b border-[#E5DFD3]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#475569]">
                 Common Situations We Handle
               </span>
-              <span className="text-xs text-slate-500 font-medium">
+              <span className="text-xs text-[#64748B] font-medium">
                 Select your situation for tailored guidance
               </span>
             </div>
@@ -164,10 +164,10 @@ export function ServicesSection() {
               return (
                 <SectionReveal key={item.id} delay={idx * 60} className="h-full">
                   <Link href="#forensic-intake" className="block h-full group">
-                    <div className="h-full rounded-2xl bg-white border border-slate-200 card-border-glow flex flex-col justify-between overflow-hidden shadow-xs">
+                    <div className="h-full rounded-2xl bg-[#FAF8F3] border border-[#E5DFD3] hover:border-[#C5A059]/60 card-border-glow flex flex-col justify-between overflow-hidden shadow-xs">
                       <div>
                         {/* Compact Image Container */}
-                        <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-100 border-b border-slate-200">
+                        <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-100 border-b border-[#E5DFD3]">
                           {!hasError ? (
                             <Image
                               src={item.imageUrl}
@@ -180,38 +180,38 @@ export function ServicesSection() {
                             />
                           ) : (
                             <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-slate-100">
-                              <div className="w-9 h-9 rounded-lg bg-blue-50 text-[#2563EB] flex items-center justify-center mb-1 group-hover:scale-110 transition-transform">
+                              <div className="w-9 h-9 rounded-lg bg-blue-50 text-[#1D4ED8] flex items-center justify-center mb-1 group-hover:scale-110 transition-transform">
                                 <Icon className="w-5 h-5" />
                               </div>
                               <span className="text-[11px] font-semibold text-slate-600">{item.tag}</span>
                             </div>
                           )}
 
-                          <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent pointer-events-none" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F3]/80 via-transparent to-transparent pointer-events-none" />
 
-                          <div className="absolute bottom-2.5 left-3 w-7 h-7 rounded-md bg-white/95 border border-slate-200 flex items-center justify-center text-[#2563EB] shadow-xs group-hover:scale-110 group-hover:bg-[#2563EB] group-hover:text-white transition-all duration-300">
+                          <div className="absolute bottom-2.5 left-3 w-7 h-7 rounded-md bg-[#FAF8F3] border border-[#E5DFD3] flex items-center justify-center text-[#1D4ED8] shadow-xs group-hover:scale-110 group-hover:bg-[#1D4ED8] group-hover:text-white transition-all duration-300">
                             <Icon className="w-3.5 h-3.5" />
                           </div>
                         </div>
 
                         {/* Text Content */}
                         <div className="p-4 sm:p-4.5">
-                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#2563EB] block mb-1">
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#1D4ED8] block mb-1">
                             {item.tag}
                           </span>
                           
-                          <h3 className="text-base font-headline font-bold text-[#0F172A] mb-1 leading-snug group-hover:text-[#2563EB] transition-colors duration-200">
+                          <h3 className="text-base font-headline font-bold text-[#0B1528] mb-1 leading-snug group-hover:text-[#1D4ED8] transition-colors duration-200">
                             {item.title}
                           </h3>
                           
-                          <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                          <p className="text-xs text-[#475569] leading-relaxed font-normal">
                             {item.subtitle}
                           </p>
                         </div>
                       </div>
 
                       {/* Small Card Bottom Link */}
-                      <div className="px-4 pb-4 pt-1 flex items-center justify-between text-xs font-semibold text-[#2563EB]">
+                      <div className="px-4 pb-4 pt-1 flex items-center justify-between text-xs font-semibold text-[#1D4ED8]">
                         <span>Check this case</span>
                         <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform duration-300" />
                       </div>
@@ -226,16 +226,16 @@ export function ServicesSection() {
         {/* 2. Three Larger Core Service Pillars */}
         <div>
           <SectionReveal>
-            <div className="flex items-center justify-between mb-8 pb-3 border-b border-slate-200">
+            <div className="flex items-center justify-between mb-8 pb-3 border-b border-[#E5DFD3]">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB] block mb-1">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#1D4ED8] block mb-1">
                   How We Help
                 </span>
-                <h3 className="text-xl md:text-2xl font-headline font-bold text-[#0F172A]">
+                <h3 className="text-xl md:text-2xl font-headline font-bold text-[#0B1528]">
                   Three Core Service Pillars
                 </h3>
               </div>
-              <Link href="/services" className="hidden sm:inline-flex items-center gap-1 text-xs font-semibold text-[#2563EB] hover:underline">
+              <Link href="/services" className="hidden sm:inline-flex items-center gap-1 text-xs font-semibold text-[#1D4ED8] hover:underline">
                 <span>View all 6 detailed services</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
@@ -248,36 +248,36 @@ export function ServicesSection() {
 
               return (
                 <SectionReveal key={pillar.id} delay={idx * 80} className="h-full">
-                  <div className="h-full rounded-2xl bg-white border border-slate-200 card-border-glow p-7 md:p-8 flex flex-col justify-between shadow-xs group">
+                  <div className="h-full rounded-2xl bg-[#FAF8F3] border border-[#E5DFD3] hover:border-[#C5A059]/60 card-border-glow p-7 md:p-8 flex flex-col justify-between shadow-xs group">
                     <div>
                       {/* Top Header */}
                       <div className="flex items-center justify-between mb-6">
-                        <div className="w-13 h-13 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#2563EB] group-hover:bg-[#2563EB] group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-xs">
+                        <div className="w-13 h-13 rounded-2xl bg-blue-50/80 border border-blue-200 flex items-center justify-center text-[#1D4ED8] group-hover:bg-[#1D4ED8] group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-xs">
                           <Icon className="w-6 h-6" />
                         </div>
-                        <span className="text-xs font-numeric font-bold text-slate-400 group-hover:text-[#2563EB] transition-colors">
+                        <span className="text-xs font-numeric font-bold text-[#C5A059] group-hover:text-[#1D4ED8] transition-colors">
                           0{idx + 1}
                         </span>
                       </div>
 
                       {/* Main Title & Tagline */}
-                      <span className="text-xs font-semibold text-blue-700 uppercase tracking-wider block mb-1">
+                      <span className="text-xs font-semibold text-[#1D4ED8] uppercase tracking-wider block mb-1">
                         {pillar.tagline}
                       </span>
-                      <h4 className="text-2xl md:text-[26px] font-headline font-extrabold text-[#0F172A] mb-3 leading-snug group-hover:text-[#2563EB] transition-colors">
+                      <h4 className="text-2xl md:text-[26px] font-headline font-extrabold text-[#0B1528] mb-3 leading-snug group-hover:text-[#1D4ED8] transition-colors">
                         {pillar.title}
                       </h4>
 
                       {/* Everyday English Description */}
-                      <p className="text-sm md:text-[15px] text-slate-600 leading-relaxed font-normal mb-6">
+                      <p className="text-sm md:text-[15px] text-[#475569] leading-relaxed font-normal mb-6">
                         {pillar.description}
                       </p>
 
                       {/* 3 Key Deliverables */}
-                      <div className="space-y-2.5 pt-2 border-t border-slate-100 mb-6">
+                      <div className="space-y-2.5 pt-2 border-t border-[#E5DFD3]/80 mb-6">
                         {pillar.points.map((pt, pIdx) => (
-                          <div key={pIdx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-600">
-                            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                          <div key={pIdx} className="flex items-start gap-2 text-xs sm:text-sm text-[#475569]">
+                            <CheckCircle2 className="w-4 h-4 text-[#0F766E] shrink-0 mt-0.5" />
                             <span>{pt}</span>
                           </div>
                         ))}
@@ -285,14 +285,14 @@ export function ServicesSection() {
                     </div>
 
                     {/* Bottom Action Button */}
-                    <div className="pt-4 border-t border-slate-100">
+                    <div className="pt-4 border-t border-[#E5DFD3]/80">
                       <Link href={pillar.href} className="inline-block w-full">
                         <Button 
                           variant="outline" 
-                          className="w-full justify-between h-12 text-sm font-semibold border-slate-300 bg-white hover:bg-blue-50 hover:border-blue-300 hover:text-[#2563EB] text-slate-800 rounded-xl transition-all shadow-xs group/btn"
+                          className="w-full justify-between h-12 text-sm font-semibold border-[#DCD7CE] bg-white hover:bg-[#F3EFE6] hover:border-[#C5A059] hover:text-[#0B1528] text-[#0B1528] rounded-xl transition-all shadow-xs group/btn"
                         >
                           <span>{pillar.buttonText}</span>
-                          <ArrowRight className="w-4 h-4 text-[#2563EB] group-hover/btn:translate-x-1 transition-transform" />
+                          <ArrowRight className="w-4 h-4 text-[#1D4ED8] group-hover/btn:translate-x-1 transition-transform" />
                         </Button>
                       </Link>
                     </div>
@@ -304,23 +304,23 @@ export function ServicesSection() {
 
           {/* Honest Service Scope Disclosure */}
           <SectionReveal>
-            <div className="p-6 sm:p-7 rounded-2xl bg-white border border-slate-200 flex flex-col md:flex-row items-start md:items-center gap-5 shadow-xs">
-              <div className="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 text-[#2563EB] flex items-center justify-center shrink-0">
+            <div className="p-6 sm:p-7 rounded-2xl bg-[#FAF8F3] border border-[#E5DFD3] flex flex-col md:flex-row items-start md:items-center gap-5 shadow-xs">
+              <div className="w-11 h-11 rounded-xl bg-blue-50/80 border border-blue-200 text-[#1D4ED8] flex items-center justify-center shrink-0">
                 <Info className="w-5 h-5" />
               </div>
 
               <div className="space-y-1 flex-1">
-                <h4 className="text-sm sm:text-base font-bold text-[#0F172A]">
+                <h4 className="text-sm sm:text-base font-bold text-[#0B1528]">
                   Our Commitment to Honest Service Scope
                 </h4>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                <p className="text-xs sm:text-sm text-[#475569] leading-relaxed font-normal">
                   EpicResurge examines transactions, organizes records, and provides guidance to help you report what happened to banks, cryptocurrency exchanges, and relevant authorities. We do not make false promises of guaranteed recovery, protecting you from secondary recovery scams.
                 </p>
               </div>
 
               <div className="shrink-0 w-full md:w-auto pt-2 md:pt-0">
                 <Link href="/services" className="block w-full md:w-auto">
-                  <Button variant="outline" className="w-full md:w-auto h-10 px-5 border-slate-300 bg-white hover:bg-slate-50 text-slate-800 text-xs sm:text-sm font-semibold rounded-xl shadow-xs">
+                  <Button variant="outline" className="w-full md:w-auto h-10 px-5 border-[#DCD7CE] bg-white hover:bg-[#F3EFE6] text-[#0B1528] text-xs sm:text-sm font-semibold rounded-xl shadow-xs">
                     <span>View All Services</span>
                   </Button>
                 </Link>

@@ -35,10 +35,10 @@
     @apply border-border;
   }
   body {
-    @apply bg-white text-[#0F172A] font-body antialiased selection:bg-[#2563EB]/15 selection:text-[#0F172A];
+    @apply bg-[#F8F7F4] text-[#0B1528] font-body antialiased selection:bg-[#C5A059]/20 selection:text-[#0B1528];
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline text-[#0F172A] tracking-tight;
+    @apply font-headline text-[#0B1528] tracking-tight;
   }
 }
 
@@ -193,6 +193,15 @@
   animation: ambientDrift 14s ease-in-out infinite;
 }
 
+/* Brand Surface Classes: Visual Rhythm Architecture */
+.bg-porcelain { background-color: #F8F7F4; }
+.bg-ivory { background-color: #F4F0E8; }
+.bg-ivory-card { background-color: #FAF8F3; }
+.bg-pale-slate { background-color: #E4E8ED; }
+.bg-deep-slate { background-color: #1C3048; }
+.bg-obsidian { background-color: #101820; }
+.bg-midnight-navy { background-color: #0B1528; }
+
 /* 4. Luxury Card Hover Border Illumination */
 .card-border-glow {
   position: relative;
@@ -201,7 +210,7 @@
 
 .card-border-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px -8px rgba(37, 99, 235, 0.12), 0 0 0 1px rgba(37, 99, 235, 0.28);
+  box-shadow: 0 14px 32px -8px rgba(11, 21, 40, 0.08), 0 0 0 1px rgba(197, 160, 89, 0.35);
 }
 
 /* 5. Traveling Line Glow across Steps & Footers */

@@ -46,7 +46,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-body antialiased bg-white text-[#0F172A] selection:bg-[#2563EB]/15 selection:text-[#0F172A] relative overflow-x-hidden max-w-full">
+      <body className="font-body antialiased bg-[#F8F7F4] text-[#0B1528] selection:bg-[#C5A059]/20 selection:text-[#0B1528] relative overflow-x-hidden max-w-full">
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe 

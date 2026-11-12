@@ -44,19 +44,19 @@ const faqs = [
 
 export function FAQSection() {
   return (
-    <section id="faq" className="py-24 bg-white relative border-b border-slate-200">
+    <section id="faq" className="py-24 bg-[#F8F7F4] relative border-b border-[#E8E5DF]">
       <div className="container mx-auto px-4 md:px-6 max-w-4xl relative z-10">
         
         {/* Header */}
         <SectionReveal className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold mb-4">
-            <HelpCircle className="w-4 h-4 text-[#2563EB]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF8F3] border border-[#E2D1A8] text-[#9E7D3B] text-xs font-semibold mb-4 shadow-xs">
+            <HelpCircle className="w-4 h-4 text-[#C5A059]" />
             <span>Frequently Asked Questions</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-[40px] font-headline font-bold mb-4 text-[#0F172A]">
+          <h2 className="text-3xl md:text-4xl lg:text-[40px] font-headline font-bold mb-4 text-[#0B1528] tracking-tight">
             Answers to Common Questions
           </h2>
-          <p className="text-base md:text-[17px] text-slate-600 max-w-2xl mx-auto leading-relaxed font-normal">
+          <p className="text-base md:text-[17px] text-[#4A5568] max-w-2xl mx-auto leading-relaxed font-normal">
             Clear, transparent answers to help you understand how asset tracing and fraud recovery works.
           </p>
         </SectionReveal>
@@ -66,12 +66,12 @@ export function FAQSection() {
             <AccordionItem 
               key={idx} 
               value={`item-${idx}`} 
-              className="border border-slate-200 bg-white rounded-2xl px-6 shadow-xs transition-all duration-300 data-[state=open]:border-blue-300 data-[state=open]:ring-2 data-[state=open]:ring-blue-100 data-[state=open]:bg-blue-50/20 hover:border-slate-300"
+              className="border border-[#E8E5DF] bg-[#FAF8F3] rounded-2xl px-6 shadow-xs transition-all duration-300 hover:border-[#C5A059]/60 hover:shadow-sm data-[state=open]:border-[#1D4ED8] data-[state=open]:ring-2 data-[state=open]:ring-blue-200/50 data-[state=open]:bg-white"
             >
-              <AccordionTrigger className="text-left text-base md:text-[17px] font-bold text-[#0F172A] py-5 hover:no-underline hover:text-[#2563EB] data-[state=open]:text-[#2563EB] transition-colors">
+              <AccordionTrigger className="text-left text-base md:text-[17px] font-bold text-[#0B1528] py-5 hover:no-underline hover:text-[#1D4ED8] data-[state=open]:text-[#1D4ED8] transition-colors">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-slate-600 text-sm md:text-[15px] leading-relaxed pb-6 font-normal">
+              <AccordionContent className="text-[#4A5568] text-sm md:text-[15px] leading-relaxed pb-6 font-normal">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
@@ -79,13 +79,13 @@ export function FAQSection() {
         </Accordion>
 
         <SectionReveal className="text-center">
-          <div className="p-8 rounded-2xl bg-slate-50 border border-slate-200 max-w-2xl mx-auto text-center shadow-sm">
-            <h3 className="text-lg md:text-[20px] font-headline font-bold text-[#0F172A] mb-2">Have a question not listed here?</h3>
-            <p className="text-sm md:text-[15px] text-slate-600 mb-6 leading-relaxed font-normal">
+          <div className="p-8 rounded-2xl bg-[#FAF8F3] border border-[#E8E5DF] max-w-2xl mx-auto text-center shadow-xs">
+            <h3 className="text-lg md:text-[20px] font-headline font-bold text-[#0B1528] mb-2">Have a question not listed here?</h3>
+            <p className="text-sm md:text-[15px] text-[#4A5568] mb-6 leading-relaxed font-normal">
               Our investigation specialists are available to answer your questions and review your case confidentially.
             </p>
             <Link href="#forensic-intake">
-              <Button size="lg" className="h-12 px-7 bg-[#2563EB] hover:bg-blue-700 text-white font-semibold rounded-xl shadow-sm transition-all inline-flex items-center gap-2">
+              <Button size="lg" className="h-12 px-7 bg-[#1D4ED8] hover:bg-[#1E40AF] text-white font-semibold rounded-xl shadow-sm transition-all inline-flex items-center gap-2">
                 <span>Speak With an Investigator</span>
                 <ArrowRight className="w-4 h-4" />
               </Button>

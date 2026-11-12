@@ -12,7 +12,7 @@ import { Footer } from '@/components/layout/Footer';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-[#0F172A]">
+    <main className="min-h-screen bg-[#F8F7F4] text-[#0B1528]">
       {/* 00. Professional Navigation: Logo, main links, enquiry button */}
       <Navbar />
       

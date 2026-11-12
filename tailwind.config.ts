@@ -18,18 +18,22 @@ export default {
       },
       colors: {
         brand: {
-          navy: '#080F1D',       /* Main background */
-          slate: '#111D31',      /* Content sections */
-          blue: '#2563EB',       /* Main buttons */
-          sky: '#38BDF8',        /* Highlights */
-          white: '#F8FAFC',      /* Main text */
-          silver: '#94A3B8',     /* Supporting text */
-          border: '#1E2E48',     /* Subtle card border */
-          borderSubtle: '#162338',
-          card: '#111D31',
-          surface: '#0E1726',
-          green: '#10B981',      /* Sparingly for positive verified outcomes */
-          amber: '#F59E0B',      /* Warnings and time-sensitive notices */
+          navy: '#0B1528',       /* Midnight Navy: Navigation, Primary headings */
+          porcelain: '#F8F7F4',  /* Warm Porcelain: Main surface & hero */
+          ivory: '#F4F0E8',      /* Soft Ivory: Section surfaces */
+          ivoryCard: '#FAF8F3',  /* Soft Ivory Card: Card & form containers */
+          paleSlate: '#E4E8ED',  /* Pale Slate: Investigation process */
+          deepSlate: '#1C3048',  /* Deep Slate: Contact & intake section */
+          obsidian: '#101820',   /* Obsidian: Footer */
+          gold: '#C5A059',       /* Champagne Gold: Premium subtle accent */
+          goldLight: '#DFBA73',
+          goldMuted: '#F5EEDB',
+          blue: '#1D4ED8',       /* Refined Blue: Main action buttons */
+          blueHover: '#1E40AF',
+          teal: '#0F766E',       /* Forest Teal: Verified, recovered, completed */
+          tealLight: '#CCFBF1',
+          borderWarm: '#E8E5DF', /* Warm Porcelain Border */
+          borderIvory: '#E5DFD3',/* Soft Ivory Border */
         },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',

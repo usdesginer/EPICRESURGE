@@ -624,17 +624,17 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
   }, [cases]);
 
   return (
-    <main className="min-h-screen bg-[#F8FAFC] text-[#0F172A] selection:bg-blue-600/20 font-sans">
+    <main className="min-h-screen bg-[#F8F7F4] text-[#0B1528] selection:bg-[#C5A059]/20 font-sans">
       
-      {/* Top Corporate Navigation Bar */}
-      <header className="h-20 bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm backdrop-blur-md bg-white/95">
+      {/* Top Institutional Navigation Bar */}
+      <header className="h-20 bg-[#0B1528] border-b border-[#1C2C48] sticky top-0 z-40 shadow-md backdrop-blur-md">
         <div className="max-w-[1600px] h-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
           
           {/* Brand Identity */}
           <div className="flex items-center gap-3.5">
             <div className={cn(
-              "w-11 h-11 rounded-xl flex items-center justify-center transition-all overflow-hidden border border-slate-200/80 shadow-xs",
-              logoUrl ? "bg-white p-1" : "bg-[#2563EB] text-white"
+              "w-11 h-11 rounded-xl flex items-center justify-center transition-all overflow-hidden border border-[#243550] shadow-sm",
+              logoUrl ? "bg-[#070D18] p-1" : "bg-[#1D4ED8] text-white"
             )}>
               {logoUrl ? (
                 <img 
@@ -650,29 +650,34 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
 
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-extrabold text-base md:text-lg tracking-tight text-[#0F172A] font-headline">EpicResurge</span>
-                <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-blue-50 text-blue-700 border border-blue-200">
-                  Operations Portal
+                <span className="font-extrabold text-base md:text-lg tracking-tight text-white font-headline">
+                  EpicResurge<span className="text-[#C5A059] font-extrabold">.</span>
+                </span>
+                <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#15233D] text-[#CBD5E1] border border-[#22365D]">
+                  COMMAND CENTER
                 </span>
               </div>
-              <p className="text-[11px] text-slate-500 font-medium">Confidential Case Management & Restitution Engine</p>
+              <p className="text-[11px] text-[#94A3B8] font-medium">Forensic Intelligence & Case Restitution Engine</p>
             </div>
           </div>
 
           {/* Center Navigation Tabs (Desktop) */}
-          <div className="hidden lg:flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200/80">
+          <div className="hidden lg:flex items-center bg-[#070D18] p-1 rounded-xl border border-[#1E2E4E]">
             <button
               onClick={() => setActiveTab('inquiries')}
               className={cn(
                 "flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all",
                 activeTab === 'inquiries' 
-                  ? "bg-white text-blue-700 shadow-xs font-bold" 
-                  : "text-slate-600 hover:text-slate-900"
+                  ? "bg-[#1D4ED8] text-white shadow-xs font-bold" 
+                  : "text-[#94A3B8] hover:text-white"
               )}
             >
               <FileText className="w-3.5 h-3.5" />
               <span>Case Inquiries</span>
-              <span className="ml-1 px-1.5 py-0.2 rounded-full text-[10px] bg-slate-200/80 text-slate-700 font-bold">
+              <span className={cn(
+                "ml-1 px-1.5 py-0.2 rounded-full text-[10px] font-bold",
+                activeTab === 'inquiries' ? "bg-white/20 text-white" : "bg-[#15233D] text-[#94A3B8]"
+              )}>
                 {cases.length}
               </span>
             </button>
@@ -682,13 +687,16 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
               className={cn(
                 "flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all",
                 activeTab === 'resolutions' 
-                  ? "bg-white text-blue-700 shadow-xs font-bold" 
-                  : "text-slate-600 hover:text-slate-900"
+                  ? "bg-[#1D4ED8] text-white shadow-xs font-bold" 
+                  : "text-[#94A3B8] hover:text-white"
               )}
             >
               <Award className="w-3.5 h-3.5" />
               <span>Resolutions</span>
-              <span className="ml-1 px-1.5 py-0.2 rounded-full text-[10px] bg-slate-200/80 text-slate-700 font-bold">
+              <span className={cn(
+                "ml-1 px-1.5 py-0.2 rounded-full text-[10px] font-bold",
+                activeTab === 'resolutions' ? "bg-white/20 text-white" : "bg-[#15233D] text-[#94A3B8]"
+              )}>
                 {stories.length}
               </span>
             </button>
@@ -698,8 +706,8 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
               className={cn(
                 "flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all",
                 activeTab === 'branding' 
-                  ? "bg-white text-blue-700 shadow-xs font-bold" 
-                  : "text-slate-600 hover:text-slate-900"
+                  ? "bg-[#1D4ED8] text-white shadow-xs font-bold" 
+                  : "text-[#94A3B8] hover:text-white"
               )}
             >
               <ImageIcon className="w-3.5 h-3.5" />
@@ -711,8 +719,8 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
               className={cn(
                 "flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all",
                 activeTab === 'media' 
-                  ? "bg-white text-blue-700 shadow-xs font-bold" 
-                  : "text-slate-600 hover:text-slate-900"
+                  ? "bg-[#1D4ED8] text-white shadow-xs font-bold" 
+                  : "text-[#94A3B8] hover:text-white"
               )}
             >
               <Layers className="w-3.5 h-3.5" />
@@ -724,9 +732,9 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
           <div className="flex items-center gap-2.5">
             
             {/* Live Database Status Indicator */}
-            <div className="hidden sm:flex items-center gap-2 px-2.5 py-1 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-medium">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Database Connected</span>
+            <div className="hidden sm:flex items-center gap-2 px-2.5 py-1 rounded-lg bg-[#0F766E]/20 border border-[#0F766E]/40 text-[#34D399] text-[11px] font-medium">
+              <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse" />
+              <span>Node Active</span>
             </div>
 
             {/* Quick Refresh */}
@@ -736,35 +744,35 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
               onClick={fetchCases}
               disabled={refreshing}
               title="Refresh database records"
-              className="h-9 px-3 border-slate-200 hover:bg-slate-100 text-slate-700 font-medium text-xs rounded-lg"
+              className="h-9 px-3 border-[#243550] bg-[#101D30] hover:bg-[#162944] text-[#CBD5E1] hover:text-white font-medium text-xs rounded-lg transition-colors"
             >
-              <RefreshCw className={cn("w-3.5 h-3.5 mr-1.5", refreshing && "animate-spin text-blue-600")} />
-              <span className="hidden md:inline">Sync</span>
+              <RefreshCw className={cn("w-3.5 h-3.5 mr-1.5", refreshing && "animate-spin text-[#60A5FA]")} />
+              <span className="hidden md:inline">Sync Node</span>
             </Button>
 
             {/* Mobile Navigation Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="lg:hidden h-9 px-2.5 border-slate-200 text-slate-700">
+                <Button variant="outline" size="sm" className="lg:hidden h-9 px-2.5 border-[#243550] bg-[#101D30] text-[#CBD5E1]">
                   <ChevronDown className="w-4 h-4" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48 bg-white border border-slate-200 shadow-md">
-                <DropdownMenuLabel className="text-xs text-slate-500 uppercase font-bold tracking-wider">Navigation</DropdownMenuLabel>
-                <DropdownMenuItem onClick={() => setActiveTab('inquiries')} className="text-xs font-medium cursor-pointer">
-                  <FileText className="w-4 h-4 mr-2 text-blue-600" /> Case Inquiries ({cases.length})
+              <DropdownMenuContent align="end" className="w-48 bg-[#0B1528] border border-[#1C2C48] text-white shadow-xl">
+                <DropdownMenuLabel className="text-xs text-[#94A3B8] uppercase font-bold tracking-wider">Navigation</DropdownMenuLabel>
+                <DropdownMenuItem onClick={() => setActiveTab('inquiries')} className="text-xs font-medium cursor-pointer text-[#CBD5E1] hover:bg-[#15233D] hover:text-white">
+                  <FileText className="w-4 h-4 mr-2 text-[#60A5FA]" /> Case Inquiries ({cases.length})
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setActiveTab('resolutions')} className="text-xs font-medium cursor-pointer">
-                  <Award className="w-4 h-4 mr-2 text-emerald-600" /> Case Resolutions ({stories.length})
+                <DropdownMenuItem onClick={() => setActiveTab('resolutions')} className="text-xs font-medium cursor-pointer text-[#CBD5E1] hover:bg-[#15233D] hover:text-white">
+                  <Award className="w-4 h-4 mr-2 text-[#34D399]" /> Case Resolutions ({stories.length})
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setActiveTab('branding')} className="text-xs font-medium cursor-pointer">
-                  <ImageIcon className="w-4 h-4 mr-2 text-purple-600" /> Brand Assets
+                <DropdownMenuItem onClick={() => setActiveTab('branding')} className="text-xs font-medium cursor-pointer text-[#CBD5E1] hover:bg-[#15233D] hover:text-white">
+                  <ImageIcon className="w-4 h-4 mr-2 text-[#C084FC]" /> Brand Assets
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setActiveTab('media')} className="text-xs font-medium cursor-pointer">
-                  <Layers className="w-4 h-4 mr-2 text-amber-600" /> Media Library
+                <DropdownMenuItem onClick={() => setActiveTab('media')} className="text-xs font-medium cursor-pointer text-[#CBD5E1] hover:bg-[#15233D] hover:text-white">
+                  <Layers className="w-4 h-4 mr-2 text-[#FBBF24]" /> Media Library
                 </DropdownMenuItem>
-                <DropdownMenuSeparator className="bg-slate-100" />
-                <DropdownMenuItem onClick={handleLogout} className="text-xs font-medium text-rose-600 hover:bg-rose-50 cursor-pointer">
+                <DropdownMenuSeparator className="bg-[#1C2C48]" />
+                <DropdownMenuItem onClick={handleLogout} className="text-xs font-medium text-rose-400 hover:bg-rose-500/10 cursor-pointer">
                   <LogOut className="w-4 h-4 mr-2" /> Sign Out
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -775,7 +783,7 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
               variant="ghost"
               size="sm"
               onClick={handleLogout}
-              className="text-slate-600 hover:text-rose-600 hover:bg-rose-50 h-9 px-3 rounded-lg text-xs font-medium"
+              className="text-[#94A3B8] hover:text-rose-400 hover:bg-rose-500/10 h-9 px-3 rounded-lg text-xs font-medium transition-colors"
             >
               <LogOut className="w-3.5 h-3.5 md:mr-1.5" />
               <span className="hidden md:inline">Sign Out</span>
@@ -797,84 +805,84 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
               
               {/* Card 1: Total Volume */}
-              <Card className="bg-white border-slate-200/90 shadow-xs hover:shadow-md hover:border-slate-300 transition-all rounded-xl p-5">
+              <Card className="bg-[#FAF8F3] border-[#E8E5DF] shadow-xs hover:shadow-md hover:border-[#C5A059]/60 transition-all rounded-xl p-5">
                 <div className="flex items-center justify-between mb-3">
-                  <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-lg bg-blue-50 text-[#1D4ED8] flex items-center justify-center border border-blue-100">
                     <FileText className="w-5 h-5" />
                   </div>
-                  <span className="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">
-                    Total Volume
+                  <span className="text-[11px] font-semibold text-[#0B1528] bg-white border border-[#E8E5DF] px-2 py-0.5 rounded-full">
+                    LIVE
                   </span>
                 </div>
-                <p className="text-xs font-medium text-slate-500">All Registered Inquiries</p>
+                <p className="text-xs font-semibold text-[#64748B] uppercase tracking-wider">Total Investigations</p>
                 <div className="flex items-baseline justify-between mt-1">
-                  <h3 className="text-3xl font-extrabold text-[#0F172A] tracking-tight">{cases.length}</h3>
-                  <span className="text-[11px] font-medium text-emerald-600 flex items-center gap-1">
-                    <CheckCircle2 className="w-3 h-3" /> 100% Synced
+                  <h3 className="text-3xl font-extrabold text-[#0B1528] tracking-tight">{cases.length}</h3>
+                  <span className="text-[11px] font-medium text-[#0F766E] flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" /> Synced
                   </span>
                 </div>
               </Card>
 
-              {/* Card 2: Pending Initial Assessment */}
-              <Card className="bg-white border-slate-200/90 shadow-xs hover:shadow-md hover:border-slate-300 transition-all rounded-xl p-5">
+              {/* Card 2: Critical Risk */}
+              <Card className="bg-[#FAF8F3] border-[#E8E5DF] shadow-xs hover:shadow-md hover:border-[#C5A059]/60 transition-all rounded-xl p-5">
                 <div className="flex items-center justify-between mb-3">
-                  <div className="w-10 h-10 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
-                    <Clock className="w-5 h-5" />
-                  </div>
-                  <span className="text-[11px] font-semibold text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full">
-                    Needs Action
-                  </span>
-                </div>
-                <p className="text-xs font-medium text-slate-500">Pending Initial Review</p>
-                <div className="flex items-baseline justify-between mt-1">
-                  <h3 className="text-3xl font-extrabold text-[#0F172A] tracking-tight">{pendingCount}</h3>
-                  <span className="text-[11px] font-medium text-slate-500">
-                    24h turnaround target
-                  </span>
-                </div>
-              </Card>
-
-              {/* Card 3: High Priority / Critical */}
-              <Card className="bg-white border-slate-200/90 shadow-xs hover:shadow-md hover:border-slate-300 transition-all rounded-xl p-5">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="w-10 h-10 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center border border-rose-100">
                     <AlertTriangle className="w-5 h-5" />
                   </div>
                   <span className="text-[11px] font-semibold text-rose-700 bg-rose-50 border border-rose-200 px-2 py-0.5 rounded-full">
-                    High Risk
+                    LIVE
                   </span>
                 </div>
-                <p className="text-xs font-medium text-slate-500">Critical / High Severity</p>
+                <p className="text-xs font-semibold text-[#64748B] uppercase tracking-wider">Critical Risk Cases</p>
                 <div className="flex items-baseline justify-between mt-1">
-                  <h3 className="text-3xl font-extrabold text-[#0F172A] tracking-tight">{criticalCount}</h3>
-                  <span className="text-[11px] font-medium text-slate-500">
-                    Urgent recovery window
+                  <h3 className="text-3xl font-extrabold text-[#0B1528] tracking-tight">{criticalCount}</h3>
+                  <span className="text-[11px] font-medium text-rose-600">
+                    Priority intervention
                   </span>
                 </div>
               </Card>
 
-              {/* Card 4: Documented Evidence */}
-              <Card className="bg-white border-slate-200/90 shadow-xs hover:shadow-md hover:border-slate-300 transition-all rounded-xl p-5">
+              {/* Card 3: Pending Verification */}
+              <Card className="bg-[#FAF8F3] border-[#E8E5DF] shadow-xs hover:shadow-md hover:border-[#C5A059]/60 transition-all rounded-xl p-5">
                 <div className="flex items-center justify-between mb-3">
-                  <div className="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
-                    <ShieldCheck className="w-5 h-5" />
+                  <div className="w-10 h-10 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center border border-amber-100">
+                    <Clock className="w-5 h-5" />
                   </div>
-                  <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
-                    Actionable
+                  <span className="text-[11px] font-semibold text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full">
+                    LIVE
                   </span>
                 </div>
-                <p className="text-xs font-medium text-slate-500">Cases With Evidence</p>
+                <p className="text-xs font-semibold text-[#64748B] uppercase tracking-wider">Pending Verification</p>
                 <div className="flex items-baseline justify-between mt-1">
-                  <h3 className="text-3xl font-extrabold text-[#0F172A] tracking-tight">{evidenceCount}</h3>
-                  <span className="text-[11px] font-medium text-slate-500">
-                    Hashes & ledgers attached
+                  <h3 className="text-3xl font-extrabold text-[#0B1528] tracking-tight">{pendingCount}</h3>
+                  <span className="text-[11px] font-medium text-[#64748B]">
+                    24h target SLA
+                  </span>
+                </div>
+              </Card>
+
+              {/* Card 4: High Trust / Evidentiary Assets */}
+              <Card className="bg-[#FAF8F3] border-[#E8E5DF] shadow-xs hover:shadow-md hover:border-[#C5A059]/60 transition-all rounded-xl p-5">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="w-10 h-10 rounded-lg bg-emerald-50 text-[#0F766E] flex items-center justify-center border border-emerald-100">
+                    <ShieldCheck className="w-5 h-5" />
+                  </div>
+                  <span className="text-[11px] font-semibold text-[#0F766E] bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
+                    LIVE
+                  </span>
+                </div>
+                <p className="text-xs font-semibold text-[#64748B] uppercase tracking-wider">High Trust Assets</p>
+                <div className="flex items-baseline justify-between mt-1">
+                  <h3 className="text-3xl font-extrabold text-[#0B1528] tracking-tight">{evidenceCount}</h3>
+                  <span className="text-[11px] font-medium text-[#0F766E]">
+                    Evidence secured
                   </span>
                 </div>
               </Card>
             </div>
 
             {/* Interactive Toolbar: Search, Filters & Action Buttons */}
-            <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-xs space-y-4">
+            <div className="bg-[#FAF8F3] border border-[#E8E5DF] rounded-xl p-4 shadow-xs space-y-4">
               <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3">
                 
                 {/* Search Bar */}
@@ -884,8 +892,8 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search by case ID, client name, email, phone, or country..."
-                    className="w-full h-10 pl-10 pr-9 bg-slate-50 border border-slate-200 rounded-lg text-sm text-[#0F172A] placeholder:text-slate-400 focus:bg-white focus:border-blue-600 focus:outline-none transition-all"
+                    placeholder="Search by case ID, participant, email, phone, or country..."
+                    className="w-full h-10 pl-10 pr-9 bg-white border border-[#E8E5DF] rounded-lg text-sm text-[#0B1528] placeholder:text-slate-400 focus:bg-white focus:border-[#1D4ED8] focus:outline-none transition-all shadow-xs"
                   />
                   {searchQuery && (
                     <button 
@@ -902,10 +910,10 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
                   
                   {/* Status Filter */}
                   <Select value={statusFilter} onValueChange={setStatusFilter}>
-                    <SelectTrigger className="h-10 w-[150px] bg-slate-50 border-slate-200 text-xs font-semibold text-slate-700">
+                    <SelectTrigger className="h-10 w-[150px] bg-white border-[#E8E5DF] text-xs font-semibold text-[#0B1528] shadow-xs">
                       <SelectValue placeholder="Status: All" />
                     </SelectTrigger>
-                    <SelectContent className="bg-white border-slate-200">
+                    <SelectContent className="bg-white border-[#E8E5DF]">
                       <SelectItem value="all">Status: All</SelectItem>
                       <SelectItem value="Review Pending">Review Pending</SelectItem>
                       <SelectItem value="Under Investigation">Under Investigation</SelectItem>
@@ -918,10 +926,10 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
 
                   {/* Risk Filter */}
                   <Select value={riskFilter} onValueChange={setRiskFilter}>
-                    <SelectTrigger className="h-10 w-[130px] bg-slate-50 border-slate-200 text-xs font-semibold text-slate-700">
+                    <SelectTrigger className="h-10 w-[130px] bg-white border-[#E8E5DF] text-xs font-semibold text-[#0B1528] shadow-xs">
                       <SelectValue placeholder="Risk: All" />
                     </SelectTrigger>
-                    <SelectContent className="bg-white border-slate-200">
+                    <SelectContent className="bg-white border-[#E8E5DF]">
                       <SelectItem value="all">Risk: All</SelectItem>
                       <SelectItem value="Critical">Critical</SelectItem>
                       <SelectItem value="High">High</SelectItem>
@@ -933,10 +941,10 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
                   {/* Category Filter */}
                   {uniqueCategories.length > 0 && (
                     <Select value={categoryFilter} onValueChange={setCategoryFilter}>
-                      <SelectTrigger className="h-10 w-[170px] bg-slate-50 border-slate-200 text-xs font-semibold text-slate-700">
+                      <SelectTrigger className="h-10 w-[170px] bg-white border-[#E8E5DF] text-xs font-semibold text-[#0B1528] shadow-xs">
                         <SelectValue placeholder="Category: All" />
                       </SelectTrigger>
-                      <SelectContent className="bg-white border-slate-200">
+                      <SelectContent className="bg-white border-[#E8E5DF]">
                         <SelectItem value="all">Category: All</SelectItem>
                         {uniqueCategories.map(cat => (
                           <SelectItem key={cat} value={cat}>{cat}</SelectItem>
@@ -949,7 +957,7 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
                   <Button
                     variant="outline"
                     onClick={exportToCsv}
-                    className="h-10 border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold text-xs rounded-lg px-3.5"
+                    className="h-10 border-[#E8E5DF] bg-white hover:bg-[#F4F0E8] text-[#0B1528] font-semibold text-xs rounded-lg px-3.5 shadow-xs"
                     title="Export filtered records to spreadsheet"
                   >
                     <Download className="w-3.5 h-3.5 mr-1.5 text-slate-500" />
@@ -959,7 +967,7 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
                   {/* Log New Case Button */}
                   <Button
                     onClick={() => setIsNewCaseOpen(true)}
-                    className="h-10 bg-[#2563EB] hover:bg-blue-700 text-white font-semibold text-xs rounded-lg px-4 shadow-sm"
+                    className="h-10 bg-[#1D4ED8] hover:bg-[#1E40AF] text-white font-semibold text-xs rounded-lg px-4 shadow-sm"
                   >
                     <Plus className="w-4 h-4 mr-1.5" />
                     Log New Case
@@ -968,10 +976,10 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
               </div>
 
               {/* Filter Chips / Active Counts */}
-              <div className="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-slate-100 text-xs text-slate-500">
+              <div className="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-[#E8E5DF] text-xs text-slate-500">
                 <div className="flex items-center gap-1.5">
-                  <span className="font-semibold text-slate-700">Displaying:</span>
-                  <span className="font-bold text-blue-600">{filteredCases.length}</span>
+                  <span className="font-semibold text-[#0B1528]">Displaying:</span>
+                  <span className="font-bold text-[#1D4ED8]">{filteredCases.length}</span>
                   <span>of {cases.length} records</span>
                   {(statusFilter !== 'all' || riskFilter !== 'all' || categoryFilter !== 'all' || searchQuery) && (
                     <button
@@ -981,7 +989,7 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
                         setRiskFilter('all');
                         setCategoryFilter('all');
                       }}
-                      className="ml-2 text-blue-600 hover:underline font-semibold text-[11px]"
+                      className="ml-2 text-[#1D4ED8] hover:underline font-semibold text-[11px]"
                     >
                       Clear all filters
                     </button>
@@ -995,26 +1003,26 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
                   <span className="inline-flex items-center gap-1 text-rose-700">
                     <span className="w-2 h-2 rounded-full bg-rose-500" /> {criticalCount} High Risk
                   </span>
-                  <span className="inline-flex items-center gap-1 text-emerald-700">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500" /> {resolvedCount} Resolved
+                  <span className="inline-flex items-center gap-1 text-[#0F766E]">
+                    <span className="w-2 h-2 rounded-full bg-[#10B981]" /> {resolvedCount} Resolved
                   </span>
                 </div>
               </div>
             </div>
 
             {/* Inquiries Table Card */}
-            <Card className="bg-white border-slate-200/90 shadow-xs rounded-xl overflow-hidden">
+            <Card className="bg-[#FAF8F3] border-[#E8E5DF] shadow-xs rounded-xl overflow-hidden">
               <div className="overflow-x-auto">
                 <Table>
-                  <TableHeader className="bg-slate-50/90 border-b border-slate-200">
-                    <TableRow className="hover:bg-transparent border-slate-200">
-                      <TableHead className="text-xs font-bold text-slate-600 uppercase tracking-wider py-4 px-4 sm:px-6">Case Identifier</TableHead>
-                      <TableHead className="text-xs font-bold text-slate-600 uppercase tracking-wider">Client Profile</TableHead>
-                      <TableHead className="text-xs font-bold text-slate-600 uppercase tracking-wider">Scam Category</TableHead>
-                      <TableHead className="text-xs font-bold text-slate-600 uppercase tracking-wider text-center">Risk Factor</TableHead>
-                      <TableHead className="text-xs font-bold text-slate-600 uppercase tracking-wider text-center">Workflow Status</TableHead>
-                      <TableHead className="text-xs font-bold text-slate-600 uppercase tracking-wider text-center">Evidence</TableHead>
-                      <TableHead className="text-xs font-bold text-slate-600 uppercase tracking-wider text-right px-4 sm:px-6">Management</TableHead>
+                  <TableHeader className="bg-[#F1ECE1] border-b border-[#E8E5DF]">
+                    <TableRow className="hover:bg-transparent border-[#E8E5DF]">
+                      <TableHead className="text-xs font-bold text-[#0B1528] uppercase tracking-wider py-4 px-4 sm:px-6">Case Identifier</TableHead>
+                      <TableHead className="text-xs font-bold text-[#0B1528] uppercase tracking-wider">Client Profile</TableHead>
+                      <TableHead className="text-xs font-bold text-[#0B1528] uppercase tracking-wider">Scam Category</TableHead>
+                      <TableHead className="text-xs font-bold text-[#0B1528] uppercase tracking-wider text-center">Risk Factor</TableHead>
+                      <TableHead className="text-xs font-bold text-[#0B1528] uppercase tracking-wider text-center">Workflow Status</TableHead>
+                      <TableHead className="text-xs font-bold text-[#0B1528] uppercase tracking-wider text-center">Evidence</TableHead>
+                      <TableHead className="text-xs font-bold text-[#0B1528] uppercase tracking-wider text-right px-4 sm:px-6">Management</TableHead>
                     </TableRow>
                   </TableHeader>
 
@@ -1031,30 +1039,41 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
                       <TableRow>
                         <TableCell colSpan={7} className="h-72 text-center py-12">
                           <div className="max-w-md mx-auto space-y-3">
-                            <div className="w-12 h-12 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto">
-                              <Search className="w-6 h-6" />
+                            <div className="w-14 h-14 rounded-2xl bg-white border border-[#E8E5DF] text-[#1D4ED8] flex items-center justify-center mx-auto shadow-xs">
+                              <Shield className="w-7 h-7 text-[#1D4ED8]" />
                             </div>
-                            <h4 className="text-base font-bold text-slate-800">No Case Records Found</h4>
-                            <p className="text-xs text-slate-500 leading-relaxed">
+                            <h4 className="text-base font-bold text-[#0B1528] tracking-tight">No Investigative Records Found</h4>
+                            <p className="text-xs text-[#64748B] leading-relaxed">
                               {searchQuery || statusFilter !== 'all' || riskFilter !== 'all' || categoryFilter !== 'all'
-                                ? "No client inquiries match the current search terms or filter criteria. Try resetting your filters."
-                                : "No client inquiries have been submitted to the database yet. Click 'Log New Case' to manually register one."}
+                                ? "No client dossiers match the current filter criteria or search keyword. Try clearing your filters."
+                                : "Zero active client inquiries currently registered. Inquiries submitted via the public forensic intake will stream directly here in real time."}
                             </p>
-                            {(searchQuery || statusFilter !== 'all' || riskFilter !== 'all' || categoryFilter !== 'all') && (
-                              <Button
-                                variant="outline"
-                                size="sm"
-                                onClick={() => {
-                                  setSearchQuery('');
-                                  setStatusFilter('all');
-                                  setRiskFilter('all');
-                                  setCategoryFilter('all');
-                                }}
-                                className="mt-2 text-xs border-slate-200"
-                              >
-                                Reset All Filters
-                              </Button>
-                            )}
+                            <div className="pt-2 flex items-center justify-center gap-2">
+                              {(searchQuery || statusFilter !== 'all' || riskFilter !== 'all' || categoryFilter !== 'all') ? (
+                                <Button
+                                  variant="outline"
+                                  size="sm"
+                                  onClick={() => {
+                                    setSearchQuery('');
+                                    setStatusFilter('all');
+                                    setRiskFilter('all');
+                                    setCategoryFilter('all');
+                                  }}
+                                  className="text-xs border-[#E8E5DF] bg-white hover:bg-[#F4F0E8] text-[#0B1528]"
+                                >
+                                  Reset All Filters
+                                </Button>
+                              ) : (
+                                <Button
+                                  size="sm"
+                                  onClick={() => setIsNewCaseOpen(true)}
+                                  className="text-xs bg-[#1D4ED8] hover:bg-[#1E40AF] text-white font-semibold rounded-lg shadow-xs"
+                                >
+                                  <Plus className="w-3.5 h-3.5 mr-1.5" />
+                                  Log Initial Case
+                                </Button>
+                              )}
+                            </div>
                           </div>
                         </TableCell>
                       </TableRow>
@@ -1071,16 +1090,16 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
                           <TableRow 
                             key={c.id} 
                             onClick={() => setSelectedCase(c)}
-                            className="border-b border-slate-100 hover:bg-slate-50/80 cursor-pointer group transition-colors"
+                            className="border-b border-[#E8E5DF] hover:bg-white cursor-pointer group transition-colors"
                           >
                             {/* Case Identifier */}
                             <TableCell className="py-4 px-4 sm:px-6 whitespace-nowrap">
                               <div className="flex items-center gap-3">
-                                <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100">
+                                <div className="w-8 h-8 rounded-lg bg-blue-50 text-[#1D4ED8] flex items-center justify-center shrink-0 border border-blue-100">
                                   <Fingerprint className="w-4 h-4" />
                                 </div>
                                 <div>
-                                  <span className="font-bold text-sm text-[#0F172A] group-hover:text-blue-600 transition-colors font-mono">
+                                  <span className="font-bold text-sm text-[#0B1528] group-hover:text-[#1D4ED8] transition-colors font-mono">
                                     {c.case_id}
                                   </span>
                                   <p className="text-[11px] text-slate-400 flex items-center gap-1 mt-0.5">
@@ -1098,8 +1117,8 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
                             {/* Client Profile */}
                             <TableCell className="whitespace-nowrap">
                               <div>
-                                <p className="text-sm font-semibold text-slate-900">{c.user_name || 'Anonymous'}</p>
-                                <p className="text-xs text-slate-500 font-mono">{c.user_email}</p>
+                                <p className="text-sm font-semibold text-[#0B1528]">{c.user_name || 'Anonymous'}</p>
+                                <p className="text-xs text-[#64748B] font-mono">{c.user_email}</p>
                                 <p className="text-[11px] text-slate-400 mt-0.5 flex items-center gap-1">
                                   <MapPin className="w-2.5 h-2.5" /> {c.user_country || 'United States'}
                                 </p>
@@ -1108,7 +1127,7 @@ CREATE POLICY "Authenticated Manage Assets" ON storage.objects FOR ALL TO authen
 
                             {/* Scam Category */}
                             <TableCell className="whitespace-nowrap">
-                              <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200/80">
+                              <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-[#F4F0E8] text-[#0B1528] border border-[#E5DFD3]">
                                 {c.case_type || 'Unspecified'}
                               </span>
                               {c.form_values?.reportedLoss && (
