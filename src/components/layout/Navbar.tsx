@@ -103,7 +103,7 @@ export function Navbar() {
               EpicResurge
             </span>
             <span className="text-[11px] uppercase tracking-wider text-[#94A3B8] font-medium hidden sm:block">
-              Financial Fraud Investigation & Consulting
+              Asset Fraud Investigation & Consulting
             </span>
           </div>
         </Link>

@@ -54,7 +54,7 @@ export function Footer() {
                 )}
               </div>
               <span className="text-xl font-headline font-bold text-[#F8F7F4] flex items-center">
-                EpicResurge<span className="text-[#C5A059] font-extrabold">.</span>
+                EpicResurge
               </span>
             </Link>
             
