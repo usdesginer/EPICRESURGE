@@ -59,15 +59,11 @@ export function Footer() {
             </Link>
             
             <p className="text-sm text-[#94A3B8] leading-relaxed max-w-sm font-normal">
-              EpicResurge is a Delaware-registered digital asset forensic and financial fraud investigation firm. We trace stolen crypto and wire funds to help victims pursue structured asset recovery.
+              EpicResurge is a digital asset forensic and asset fraud investigation firm. We trace stolen crypto and wire funds to help victims pursue structured asset recovery.
             </p>
 
-            <div className="pt-2 flex flex-col gap-2.5">
-              <span className="inline-flex items-center gap-1.5 text-xs text-[#CBD5E1] bg-[#1C2836] px-3 py-1.5 rounded-lg border border-[#2A3A4E] w-fit">
-                <MapPin className="w-3.5 h-3.5 text-[#C5A059]" />
-                Delaware Division of Corporations Registered
-              </span>
-              <div className="text-xs text-[#CBD5E1] flex items-start gap-2 pt-0.5">
+            <div className="pt-2">
+              <div className="text-xs text-[#CBD5E1] flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 text-[#C5A059] shrink-0 mt-0.5" />
                 <address className="not-italic leading-relaxed">
                   <span className="text-[#94A3B8] block text-[11px] uppercase tracking-wider font-semibold">Operations Office</span>
@@ -130,7 +126,7 @@ export function Footer() {
         {/* Bottom Legal Notice */}
         <div className="pt-8 border-t border-[#1E293B] flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#94A3B8]/80">
           <p>
-            © {new Date().getFullYear()} EpicResurge LLC. All rights reserved. Registered in the State of Delaware.
+            © {new Date().getFullYear()} EpicResurge LLC. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link href="/privacy-policy" className="hover:text-[#DFBA73] transition-colors">Privacy Policy</Link>
