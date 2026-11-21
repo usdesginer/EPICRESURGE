@@ -32,6 +32,20 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+        {/* Google tag (gtag.js) - AW-18580924139 */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18580924139"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'AW-18580924139');
+            `,
+          }}
+        />
       </head>
       <body className="font-body antialiased bg-[#F8F7F4] text-[#0B1528] selection:bg-[#C5A059]/20 selection:text-[#0B1528] relative overflow-x-hidden max-w-full">
         {/* Google Tag Manager (noscript) */}
